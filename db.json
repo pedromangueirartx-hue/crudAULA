@@ -1,0 +1,33 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "sobrenome": "Netflix",
+      "cpf": "00000000000",
+      "email": "admin@netflix.com",
+      "senha": "123",
+      "telefone": "11999999999",
+      "rua": "Av. das Nações",
+      "cep": "00000-000",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "isAdmin": true
+    },
+    {
+      "nome": "Pedro",
+      "sobrenome": "Macaco",
+      "cpf": "3021321902",
+      "telefone": "11 999999999",
+      "email": "pedromacaco@gmail.com",
+      "senha": "123",
+      "rua": "Rua amor",
+      "cep": "2131231231",
+      "cidade": "Mogi",
+      "estado": "SP",
+      "isAdmin": false,
+      "id": "I3f0yOu_IOw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

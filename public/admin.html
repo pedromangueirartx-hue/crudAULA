@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix - Admin</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Netflix Admin</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#" onclick="sair()">Sair</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="card card-large">
+            <h2>Controle de Assinantes</h2>
+            
+            <div class="search-box">
+                <input type="text" id="buscaCpf" placeholder="Buscar por CPF...">
+                <button onclick="buscarUsuario()" class="btn" style="width: auto;">Buscar</button>
+                <button onclick="carregarUsuarios()" class="btn btn-edit" style="width: auto;">Limpar</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaUsuarios"></tbody>
+            </table>
+        </div>
+
+        <div id="editSecao" class="card" style="display: none; margin-top: 20px;">
+            <h3>Editar Assinante</h3>
+            <form class="form-grid" onsubmit="event.preventDefault(); salvarEdicao();">
+                <input type="hidden" id="editId">
+                <div class="form-group"><input type="text" id="editNome" placeholder="Nome" required></div>
+                <div class="form-group"><input type="text" id="editCpf" placeholder="CPF" required></div>
+                <div class="form-group full-width"><input type="email" id="editEmail" placeholder="Email" required></div>
+                <div class="form-group full-width search-box">
+                    <button type="submit" class="btn">Salvar</button>
+                    <button type="button" class="btn btn-edit" onclick="cancelarEdicao()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="/public/admin.js"></script>
+</body>
+</html>
